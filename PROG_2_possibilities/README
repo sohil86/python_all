@@ -1,0 +1,9 @@
+1. The "source" folder has the source code (possible_2.c) and the object file (possible_2.o).
+
+2. The "include" folder has all the header file (header.h).
+
+3. The "build" folder contains the Makefile.
+
+4. The "bin" folder contains the executable file.
+
+5. To run the executable on command line, go to bin folder and write ./possible_2 <string>

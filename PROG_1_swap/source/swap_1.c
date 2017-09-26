@@ -57,52 +57,32 @@
  *
  * @Date        29-August-2017
  */
-void main()
+int main(int argc, char * argv[])
 {
 	unsigned int len=0;
 	unsigned int i=0;
 	unsigned int j=0;    
-	char *x = NULL;
-	char *y = NULL;
-	char *buff = NULL;
-	x=(char*) malloc(15 * sizeof(char));
-	y=(char*) malloc(15 * sizeof(char));
-	buff=(char*) malloc(100 * sizeof(char));	
-	if (NULL != x)
+	char x[1024] = {0};
+	char y[1024] = {0};
+	if (3 == argc)
 	{
-		if (NULL != y)
-		{
-			if (NULL != buff)
-			{
-				printf ("\nEnter first value (max 15 charaters rest will be ignored):-  ");
-				scanf("%15[^\n^\t]s",x);
-				scanf("%[^\n^\t]",buff);
-				
-				i=strlen(x);
-				
-				printf("Enter second value (max 15 characters rest will be ignored):-  ");
-				scanf("%c",buff);
-				scanf("%15[^\t^\n]s",y);
-				scanf("%[^\n^\t]",buff);
+		strcpy(x,argv[1]);
+		strcpy(y,argv[2]);
+		i=strlen(x);
+		j=strlen(y);
 
-				j=strlen(y);
+		len=(i>j?i:j);
 
-    			len=(i>j?i:j);
-
-				for(i=0;i<len;i++)
-				{ 
-    				swap(x[i],y[i]);
-    			}
-
-				printf("\nThe first value:- %s ", x);
-    			printf("\nThe second value:- %s \n", y);
-				
-				free(buff);	
-			}
-			
-			free(y);
+		for(i=0;i<len;i++)
+		{ 
+			swap(x[i],y[i]);
 		}
-		
-		free(x);
+
+		printf("\nThe first value:- %s ", x);
+		printf("\nThe second value:- %s \n", y);
+	}
+	else 
+	{
+		printf("Usage : ./swap_1 <string1><space><string2>\n\n");
 	}
 }

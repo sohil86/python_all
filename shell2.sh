@@ -1,3 +1,0 @@
-
-./shell.sh
-done

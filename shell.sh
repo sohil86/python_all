@@ -1,4 +1,4 @@
-for number in {0..10}
+for number in {0..100}
 do
 cd random/build
 make

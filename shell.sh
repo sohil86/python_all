@@ -1,4 +1,4 @@
-for number in {0..100}
+for number in `seq 1 100`
 do
 echo $number
 cd random/build

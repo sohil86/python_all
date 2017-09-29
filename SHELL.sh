@@ -9,6 +9,7 @@ echo
 echo TEST \# $number
 echo .............................................
 cd PROG_RANDOM_NUMBER/Bin
+chmod 777 RANDOM_NUMBER
 ./RANDOM_NUMBER
 exit_status=$?
 cd ../..

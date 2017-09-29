@@ -1,5 +1,6 @@
 for number in {0..100}
 do
+echo $number
 cd random/build
 make
 cd ../bin

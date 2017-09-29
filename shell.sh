@@ -1,6 +1,6 @@
 for number in `seq 1 100`
 do
-echo $number
+echo TEST NUMBER :- $number
 cd random/build
 make
 cd ../bin

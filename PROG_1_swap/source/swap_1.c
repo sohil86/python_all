@@ -62,7 +62,6 @@ int main(int argc, char * argv[])
 	unsigned int len=0;
 	unsigned int i=0;
 	unsigned int j=0;
-	unsigned int num = 0;
 	char x[1024] = {0};
 	char y[1024] = {0};
 	if (3 == argc)
@@ -86,6 +85,5 @@ int main(int argc, char * argv[])
 	{
 		printf("Usage : ./swap_1 <string1><space><string2>\n\n");
 	}
-	num = 5;
-return(num);
+return(0);
 }
